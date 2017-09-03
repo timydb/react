@@ -18,12 +18,12 @@ module.exports = {
                     presets: ['react', 'es2015'],
                     plugins: ['react-html-attrs'],//添加组件的插件配置
                 }
-            }
+            },
             //下面是添加csss的loader，即css模块化的配置方法
-            // {
-            //     test: /\.css$/,
-            //     loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
-            // }
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
+            }
         ]
     }
 };

@@ -25,6 +25,11 @@ export default class Car extends React.Component{
         this.state.data.push(item);
         this.setState({ singleItem: null, data: this.state.data });
     }
+    todo() {
+        let item = { "id": 1, "name": "张三", "age": "18", "address": "北京" };
+        this.props.history.push({ pathname: '/todo', params: item });
+        // console.log(this.props)
+    }
     render() {
         return (
             <div>
@@ -33,6 +38,7 @@ export default class Car extends React.Component{
                 <div style={{ display: this.state.singleItem ? "block" : "none"}}>
                     <Dialog data={this.state.singleItem} closeCb={this.closeDialog}/>
                 </div>
+                <button onClick={this.todo.bind(this)}>ToDo</button>
             </div>
         )
     }

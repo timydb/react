@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background: #f1f1f1;
+    font-size: 14px;
+    padding-top: 100px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    background: #fff;
+}
+
+.item {
+    margin-top: 20px;
+}
+
+.item label {
+    color: #444;
+}
+
+.item input {
+    border: 1px solid #cccccc;
+    line-height: 40px;
+    padding: 0px 10px;
+}
+
+.btn {
+    width: 150px;
+    line-height: 40px;
+    background: #0074D9;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.ml14 {
+    margin-left: 14px;
+}

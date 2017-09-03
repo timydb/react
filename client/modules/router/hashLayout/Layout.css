@@ -1,0 +1,10 @@
+.ulLayout {
+    list-style: none;
+}
+.ulLayout li{float:left;margin-left: 30px;}
+.clearfix:after{
+    clear: both;
+    content:'';
+    display: block;
+}
+.red{color:red}.green{color:green}

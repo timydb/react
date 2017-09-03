@@ -25,6 +25,9 @@ export default class toDo extends React.Component {
         this.state.data.push(item); 
         this.setState({ open:"", data: this.state.data });
     }
+    showDeail() {
+        
+    }
     render() {
         return (
             <div>
