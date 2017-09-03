@@ -29,6 +29,7 @@ export class LoginTmp extends React.Component{
         var name = this.refs['__loginName'].value;
         var pwd = this.refs['__loginPwd'].value;
         if (pwd && name) {
+            cachePub.set(CacheKeys.USERNAME, name)
             this.props.history.push({pathname:'/layout'})
         }
     }
