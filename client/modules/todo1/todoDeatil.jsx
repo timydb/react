@@ -27,7 +27,7 @@ export default class TodoNewDetail extends React.Component{
                 age:{this.state.item.age}<br />
                 address:{this.state.item.address}<br />
 
-                <input type="button" value="back" onClick={this.back} />
+                <input type="button" value="back"  />
             </div>
         )
     }

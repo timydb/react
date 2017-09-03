@@ -27,7 +27,7 @@ export default class Car extends React.Component{
     }
     todo() {
         let item = { "id": 1, "name": "张三", "age": "18", "address": "北京" };
-        this.props.history.push({ pathname: '/todo', params: item });
+        this.props.history.push({ pathname: 'layout/todo', params: item });
         // console.log(this.props)
     }
     render() {

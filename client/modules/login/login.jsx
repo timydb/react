@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink, BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom';
 import LoginCss from './login.css';
-import Car from '../car/car.jsx';
+import Layout from '../layout/layout.jsx';
 
 export default class login extends React.Component{
     constructor(props) {
@@ -11,9 +11,10 @@ export default class login extends React.Component{
         return (
             <BrowserRouter>
                 <div>
-                    <Route exact path='/' component={LoginTmp}/>
-                    <Route path='/car' component={Car}/>
-                    {/* <Route path='/layout' component={Layout} /> */}
+                    <Switch>
+                        <Route exact path='/' component={LoginTmp}/>
+                        <Route path='/layout' component={Layout} />
+                    </Switch>
                 </div>
             </BrowserRouter>
         )
@@ -28,7 +29,7 @@ export class LoginTmp extends React.Component{
         var name = this.refs['__loginName'].value;
         var pwd = this.refs['__loginPwd'].value;
         if (pwd && name) {
-            this.props.history.push({pathname:'/car'})
+            this.props.history.push({pathname:'/layout'})
         }
     }
     render() {

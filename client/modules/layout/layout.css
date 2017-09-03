@@ -1,0 +1,60 @@
+.container {
+    margin: 0;
+    padding: 50px;
+}
+
+.container::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+.nav {
+    float: left;
+    min-height: 300px;
+    background: #f1f1f1;
+    width: 200px;
+}
+
+.rightBox {
+    margin-left: 230px;
+}
+
+.top {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logout {
+    display: inline-block;
+    width: 60px;
+    line-height: 30px;
+    background: #880000;
+    color: #fff;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.box {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 300px;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav ul li {
+    line-height: 50px;
+}

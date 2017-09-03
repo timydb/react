@@ -52,13 +52,14 @@ export default class ToDo extends React.Component {
     }
     toCar() {
         console.dir(this.props)
-        this.props.history.push({pathname:'/car'})
+        this.props.history.push({pathname:'/layout/car'})
     }
     todoNewDetail() {
         this.props.history.push({ pathname: '/todoDetail/' + this.state.item.id , params:this.state.item})
     }
     detail() {
-        this.props.history.push({ pathname: '/todo/1', params: {id:1,name:'123',age:'123',address:'123'}})
+        console.log(this.props.match.url)
+        this.props.history.push({ pathname:this.props.match.url+'/1', params: {id:1,name:'123',age:'123',address:'123'}})
     }
     render() {
         return (
@@ -71,7 +72,7 @@ export default class ToDo extends React.Component {
                 <button onClick={this.toCar.bind(this)}>toCar</button>
                 <button onClick={this.todoNewDetail.bind(this)}>todoNewDetai</button>
                 <button onClick={this.detail.bind(this)}>详情</button>
-                <Route path='/todo/:id' component={CurrentDetail}/>
+                <Route path={`${this.props.match.url}/1`} component={CurrentDetail}/>
             </div>
         )
     }
