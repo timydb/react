@@ -4,6 +4,7 @@ import LayoutCss from './layout.css';
 import Car from '../car/car.jsx';
 import Todo from '../todo1/todo.jsx';
 import TodoNewDetail from '../todo1/todoDeatil.jsx'
+import Person from '../person/person.jsx';
 
 export default class Layout extends React.Component {
     constructor(props) {
@@ -28,6 +29,7 @@ export default class Layout extends React.Component {
                     <ul>
                         <li><Link to={`${this.props.match.url}/car`}>Car</Link></li>
                         <li><Link to={`${this.props.match.url}/todo`}>Todo</Link></li>
+                        <li><Link to={`${this.props.match.url}/person`}>Person</Link></li>
                     </ul>
                 </div>
                 <div className={LayoutCss.rightBox}>
@@ -40,6 +42,7 @@ export default class Layout extends React.Component {
                             <Route path={`${this.props.match.url}/car`} component={Car} />
                             <Route path={`${this.props.match.url}/todo`} component={Todo} />
                             <Route path={`${this.props.match.url}/todoDetail/:id`} component={TodoNewDetail} />
+                            <Route path={`${this.props.match.url}/person`} component={Person} />
                         </Switch>
                     </div>
                 </div>

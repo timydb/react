@@ -2,20 +2,26 @@ import React from 'react'
 export default class CurrentDetail extends React.Component {
     constructor(props) {
         super(props);
-        this.state={ item: '' }
+        this.state={ item: null }
     }
 
-    componentWillMount() {
-        var item = this.props.location.params;
-        console.log(this.props.location)
-        this.setState({item:item})
-    }
+    // componentWillMount() {
+    //     var item = this.props.match;
+    //     debugger
+    //     console.log(this.props.match)
+    //     this.setState({item:item})
+    // }
     get(id) {
-        return { id: 'id', name: 'xx', age: 'xx', address: 'xx' }
+        return { id: id, name: 'xx', age: 'xx', address: 'xx' }
     }
     componentWillMount() {
         let id = this.props.match.params.id;
+        console.log(this.props.match.params)
         this.setState({ item: this.get(id) })
+    }
+    
+    componentWillReceiveProps(nextProps) {
+        this.setState({ item: this.get(nextProps.match.params.id) })
     }
     
     back() {
