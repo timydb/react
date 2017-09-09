@@ -12,7 +12,7 @@ export default class Person extends React.Component{
         let arr = [
             {id:1, name: 'timy', age: 2, address: 'bj' },
             {id:2, name: '大白', age: 2, address: 'bj' },
-            {id:3, name: '多多', age: 1, address: 'bj' }
+            {id:3, name: '多多', age: 1, address: 'bj' } 
         ]
         this.setState({data:arr})
     }

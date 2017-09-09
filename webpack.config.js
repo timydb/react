@@ -1,7 +1,7 @@
 
 let webpack = require('Webpack');
 module.exports = {
-    devtool: 'eval-source-map',
+    // devtool: 'eval-source-map',
     entry: {
         main: __dirname + "/client/app.jsx",
         vendor:['react','react-dom','react-router-dom']
@@ -14,15 +14,15 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor', 
             filename: 'vendor.js',
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            output: {
-                comments: false,
-            },
-            compress: {
-                warnings: false
-            }
         })
+        // new webpack.optimize.UglifyJsPlugin({
+        //     output: {
+        //         comments: false,
+        //     },
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
     ],
     module: {
         //loaders加载器
